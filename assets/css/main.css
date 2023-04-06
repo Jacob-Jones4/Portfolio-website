@@ -1161,6 +1161,7 @@ input, select, textarea {
 			background-image: url("../../images/DSC_0253.JPG");
 			background-position: center;
 			background-size: center;
+			object-fit: fill;
 			background-repeat: no-repeat;
 			z-index: 1;
 		}

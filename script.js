@@ -1,0 +1,3 @@
+const nav=document.querySelector('.nav');const menu=document.querySelector('.menu');menu?.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('.nav nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();
+
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.work-card[data-category]').forEach(c=>c.style.display=(f==='all'||c.dataset.category===f)?'flex':'none')}));

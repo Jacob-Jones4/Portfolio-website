@@ -1,3 +1,44 @@
-const nav=document.querySelector('.nav');const menu=document.querySelector('.menu');menu?.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('.nav nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();
+const nav = document.querySelector('.nav');
+const menu = document.querySelector('.menu');
+const year = document.getElementById('year');
 
-document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.work-card[data-category]').forEach(c=>c.style.display=(f==='all'||c.dataset.category===f)?'flex':'none')}));
+menu?.addEventListener('click', () => {
+    nav?.classList.toggle('open');
+});
+
+document.querySelectorAll('.nav nav a').forEach((link) => {
+    link.addEventListener('click', () => {
+        nav?.classList.remove('open');
+    });
+});
+
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
+
+const filterButtons = document.querySelectorAll('.filter');
+const workCards = document.querySelectorAll('.work-card[data-category]');
+
+filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        filterButtons.forEach((filterButton) => {
+            filterButton.classList.remove('active');
+        });
+
+        button.classList.add('active');
+
+        const selectedFilter = button.dataset.filter;
+
+        workCards.forEach((card) => {
+            const categories = (card.dataset.category || '')
+                .split(' ')
+                .filter(Boolean);
+
+            const shouldShow =
+                selectedFilter === 'all' ||
+                categories.includes(selectedFilter);
+
+            card.style.display = shouldShow ? 'flex' : 'none';
+        });
+    });
+});

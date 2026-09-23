@@ -1382,3 +1382,25 @@ a {
         padding: 25px;
     }
 }
+/* Move CURRENT SHOW label to top of current show card */
+.current-show .production-status-label {
+    position: absolute;
+    top: 28px;
+    left: 32px;
+    z-index: 5;
+
+    margin: 0;
+    padding: 10px 14px;
+
+    color: #c69cff;
+    background: rgba(8, 8, 8, 0.78);
+    border: 1px solid rgba(170, 114, 255, 0.45);
+    border-radius: 100px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.current-show .production-status-content {
+    position: relative;
+}

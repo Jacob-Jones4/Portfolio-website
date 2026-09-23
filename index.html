@@ -14,6 +14,38 @@
 
         <link rel="stylesheet" href="style.css" />
         <script src="script.js" defer></script>
+
+        <!-- Page-specific image adjustments -->
+        <style>
+            /*
+             * Fake News and Traveling Salvation Show
+             * Show more of the original image on desktop screens.
+             */
+            @media (min-width: 900px) {
+                .feature.zoom-out {
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-color: #050505;
+                }
+            }
+
+            /*
+             * Production Archive links
+             */
+            .archive-list a {
+                color: inherit;
+                text-decoration: none;
+                transition:
+                    color 0.2s ease,
+                    transform 0.2s ease;
+            }
+
+            .archive-list a:hover {
+                color: #ffffff;
+                transform: translateX(4px);
+            }
+        </style>
     </head>
 
     <body>
@@ -108,7 +140,7 @@
                     <!-- Fake News -->
                     <a
                         href="projects/fake-news.html"
-                        class="feature wide photo-bg"
+                        class="feature wide photo-bg zoom-out"
                         style="--bg: url('images/EPC Disco.jpg')"
                     >
                         <div class="shade"></div>
@@ -127,7 +159,7 @@
                     <!-- The Traveling Salvation Show -->
                     <a
                         href="projects/traveling-salvation-show.html"
-                        class="feature wide photo-bg"
+                        class="feature wide photo-bg zoom-out"
                         style="--bg: url('images/TSS-EPC.png')"
                     >
                         <div class="shade"></div>
@@ -143,10 +175,29 @@
                         </div>
                     </a>
 
-                    <!-- The Lightning Thief -->
+                    <!-- Hidden Lake Lights - Large Card -->
+                    <a
+                        href="projects/hidden-lake-lights.html"
+                        class="feature wide photo-bg"
+                        style="--bg: url('images/HLL-Rainbow-2025.JPEG')"
+                    >
+                        <div class="shade"></div>
+
+                        <div class="feature-copy">
+                            <small>PIXEL DESIGN · PROGRAMMING</small>
+
+                            <h3>Hidden Lake Lights</h3>
+
+                            <p>
+                                Large-scale synchronized holiday lighting
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- The Lightning Thief - Small Card -->
                     <a
                         href="projects/lightning-thief.html"
-                        class="feature wide photo-bg"
+                        class="feature photo-bg"
                         style="--bg: url('https://jjoneslighting.com/images/TLT%209.JPG')"
                     >
                         <div class="shade"></div>
@@ -157,7 +208,7 @@
                             <h3>The Lightning Thief</h3>
 
                             <p>
-                                St. Dominic High School · Lighting Designer
+                                St. Dominic High School
                             </p>
 
                             <span>
@@ -166,25 +217,7 @@
                         </div>
                     </a>
 
-                    <!-- Steppin Up Dance Studio -->
-                    <article
-                        class="feature photo-bg"
-                        style="--bg: url('https://jjoneslighting.com/images/Step%20Up%201.jpeg')"
-                    >
-                        <div class="shade"></div>
-
-                        <div class="feature-copy">
-                            <small>DANCE · LIGHTING DESIGN</small>
-
-                            <h3>Steppin Up Dance Studio</h3>
-
-                            <p>
-                                Recital lighting design & programming
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Footloose -->
+                    <!-- Footloose - Small Card -->
                     <a
                         href="projects/footloose.html"
                         class="feature photo-bg"
@@ -203,27 +236,28 @@
                         </div>
                     </a>
 
-                    <!-- Hidden Lake Lights -->
+                    <!-- Steppin Up Dance Studio - Small Card -->
                     <a
-                        href="projects/hidden-lake-lights.html"
+                        href="projects/steppin-up.html"
                         class="feature photo-bg"
-                        style="--bg: url('images/HLL-Rainbow-2025.jpg')"
+                        style="--bg: url('https://jjoneslighting.com/images/Step%20Up%201.jpeg')"
                     >
                         <div class="shade"></div>
 
                         <div class="feature-copy">
-                            <small>PIXEL DESIGN · PROGRAMMING</small>
+                            <small>DANCE · LIGHTING DESIGN</small>
 
-                            <h3>Hidden Lake Lights</h3>
+                            <h3>Steppin Up Dance Studio</h3>
 
                             <p>
-                                Large-scale synchronized holiday lighting
+                                Recital lighting design & programming
                             </p>
                         </div>
                     </a>
 
                     <!-- More Productions -->
-                    <article
+                    <a
+                        href="work.html"
                         class="feature photo-bg"
                         style="--bg: url('https://jjoneslighting.com/images/TLT%2010.JPG')"
                     >
@@ -238,7 +272,7 @@
                                 Anastasia · Curtains · Miracle on 34th Street · and more!
                             </p>
                         </div>
-                    </article>
+                    </a>
                 </div>
 
                 <div style="margin: 45px 0 0">
@@ -249,20 +283,56 @@
 
                 <!-- Production Archive -->
                 <div class="archive">
-                    <p class="eyebrow">PRODUCTION ARCHIVE</p>
+                    <p class="eyebrow">
+                        PRODUCTION ARCHIVE
+                    </p>
 
                     <div class="archive-list">
-                        <span>The Traveling Salvation Show</span>
-                        <span>Miracle on 34th Street</span>
-                        <span>The Miracle Worker</span>
-                        <span>Anastasia</span>
-                        <span>Legally Blonde Jr.</span>
-                        <span>Charlie and the Chocolate Factory</span>
-                        <span>Charley's Aunt</span>
-                        <span>Aladdin</span>
-                        <span>Shrek Jr.</span>
-                        <span>Curtains</span>
-                        <span>Les Misérables</span>
+
+                        <a href="projects/traveling-salvation-show.html">
+                            The Traveling Salvation Show
+                        </a>
+
+                        <a href="projects/miracle-on-34th-street.html">
+                            Miracle on 34th Street
+                        </a>
+
+                        <a href="projects/the-miracle-worker.html">
+                            The Miracle Worker
+                        </a>
+
+                        <a href="projects/anastasia.html">
+                            Anastasia
+                        </a>
+
+                        <a href="projects/legally-blonde-jr.html">
+                            Legally Blonde Jr.
+                        </a>
+
+                        <a href="projects/charlie-and-the-chocolate-factory.html">
+                            Charlie and the Chocolate Factory
+                        </a>
+
+                        <a href="projects/charleys-aunt.html">
+                            Charley's Aunt
+                        </a>
+
+                        <a href="projects/aladdin.html">
+                            Aladdin
+                        </a>
+
+                        <a href="projects/shrek-jr.html">
+                            Shrek Jr.
+                        </a>
+
+                        <a href="projects/curtains.html">
+                            Curtains
+                        </a>
+
+                        <a href="projects/les-miserables.html">
+                            Les Misérables
+                        </a>
+
                     </div>
                 </div>
             </section>
@@ -270,7 +340,9 @@
             <!-- About -->
             <section id="about" class="about section">
                 <div>
-                    <p class="eyebrow">ABOUT JACOB</p>
+                    <p class="eyebrow">
+                        ABOUT JACOB
+                    </p>
 
                     <h2>
                         Creative ideas.<br />
@@ -322,13 +394,17 @@
 
             <!-- Experience -->
             <section id="experience" class="section experience">
-                <p class="eyebrow">EXPERIENCE</p>
+                <p class="eyebrow">
+                    EXPERIENCE
+                </p>
 
                 <div class="experience-row">
                     <span>2023 — PRESENT</span>
 
                     <div>
-                        <h3>Gateway Studios & Production Services</h3>
+                        <h3>
+                            Gateway Studios & Production Services
+                        </h3>
 
                         <p>
                             Lighting Technician · Professional production support,
@@ -342,7 +418,9 @@
                     <span>2018 — PRESENT</span>
 
                     <div>
-                        <h3>St. Dominic High School</h3>
+                        <h3>
+                            St. Dominic High School
+                        </h3>
 
                         <p>
                             Lighting Designer / Programmer · Designing productions
@@ -356,7 +434,9 @@
                     <span>2021 — PRESENT</span>
 
                     <div>
-                        <h3>Steppin Up Dance Studio</h3>
+                        <h3>
+                            Steppin Up Dance Studio
+                        </h3>
 
                         <p>
                             Lighting Designer · Programming and operating annual
@@ -369,7 +449,9 @@
                     <span>LIVE MUSIC</span>
 
                     <div>
-                        <h3>Concert & Tribute Productions</h3>
+                        <h3>
+                            Concert & Tribute Productions
+                        </h3>
 
                         <p>
                             Lighting and video direction for live music, including
@@ -382,12 +464,16 @@
 
             <!-- Capabilities -->
             <section id="services" class="services section">
-                <p class="eyebrow">CAPABILITIES</p>
+                <p class="eyebrow">
+                    CAPABILITIES
+                </p>
 
                 <div class="service">
                     <span>01</span>
 
-                    <h3>Lighting Design</h3>
+                    <h3>
+                        Lighting Design
+                    </h3>
 
                     <p>
                         Visual concepts and complete lighting design for concerts,
@@ -398,7 +484,9 @@
                 <div class="service">
                     <span>02</span>
 
-                    <h3>Programming</h3>
+                    <h3>
+                        Programming
+                    </h3>
 
                     <p>
                         Console programming, cueing, show operation, effects
@@ -409,7 +497,9 @@
                 <div class="service">
                     <span>03</span>
 
-                    <h3>Previsualization</h3>
+                    <h3>
+                        Previsualization
+                    </h3>
 
                     <p>
                         3D previsualization, equipment planning, patch lists and
@@ -420,7 +510,9 @@
                 <div class="service">
                     <span>04</span>
 
-                    <h3>Pixels & Mapping</h3>
+                    <h3>
+                        Pixels & Mapping
+                    </h3>
 
                     <p>
                         xLights sequencing, pixel mapping and synchronized creative
@@ -431,7 +523,9 @@
                 <div class="service">
                     <span>05</span>
 
-                    <h3>Production Technology</h3>
+                    <h3>
+                        Production Technology
+                    </h3>
 
                     <p>
                         Technical direction and systems-minded problem solving

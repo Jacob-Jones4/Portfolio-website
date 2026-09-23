@@ -1086,3 +1086,299 @@ a {
         flex-direction: column;
     }
 }
+/* =====================================================
+   PREVIOUS / CURRENT / NEXT SHOWS
+===================================================== */
+
+.show-status-section {
+    padding: 100px 7vw;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(170, 114, 255, 0.09),
+            transparent 38%
+        ),
+        #090909;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.show-status-heading {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.show-status-heading h2 {
+    margin: 8px 0 14px;
+    font: 500 clamp(40px, 5vw, 72px) / 1 Manrope, sans-serif;
+    letter-spacing: -3px;
+}
+
+.show-status-heading > p:last-child {
+    margin: 0;
+    color: #888;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* CARD GRID */
+
+.show-status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+
+/* CARD */
+
+.production-status-card {
+    --card-accent: #777;
+
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+
+    color: #fff;
+    text-decoration: none;
+
+    border: 1px solid #303030;
+    border-radius: 28px;
+
+    background: #111;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.production-status-card:hover {
+    transform: translateY(-8px);
+    border-color: #555;
+}
+
+
+/* BACKGROUND IMAGE */
+
+.production-status-image {
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--show-image);
+    background-size: cover;
+    background-position: center;
+
+    transition: transform 0.6s ease;
+}
+
+.production-status-card:hover .production-status-image {
+    transform: scale(1.045);
+}
+
+
+/* DARK GRADIENT OVER IMAGE */
+
+.production-status-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(5, 5, 5, 0.98) 0%,
+            rgba(5, 5, 5, 0.88) 27%,
+            rgba(5, 5, 5, 0.35) 65%,
+            rgba(5, 5, 5, 0.12) 100%
+        );
+}
+
+
+/* CONTENT */
+
+.production-status-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    padding: 32px;
+}
+
+.production-status-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 13px;
+
+    color: var(--card-accent);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.production-status-content h3 {
+    margin: 0 0 9px;
+
+    font: 600 clamp(28px, 3vw, 42px) / 1.05 Manrope, sans-serif;
+    letter-spacing: -1.5px;
+}
+
+.production-type {
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* BOTTOM STATUS BAR */
+
+.production-status-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 28px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+    color: #ddd;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* PREVIOUS */
+
+.previous-show {
+    --card-accent: #999;
+}
+
+
+/* CURRENT */
+
+.current-show {
+    --card-accent: #c69cff;
+
+    border-color: rgba(170, 114, 255, 0.65);
+
+    box-shadow:
+        0 0 0 1px rgba(170, 114, 255, 0.08),
+        0 20px 60px rgba(108, 54, 180, 0.16);
+}
+
+.current-show::before {
+    content: "";
+
+    position: absolute;
+    z-index: 3;
+
+    top: 0;
+    right: 12%;
+    left: 12%;
+
+    height: 2px;
+
+    background: #aa72ff;
+
+    box-shadow:
+        0 0 15px #aa72ff,
+        0 0 35px rgba(170, 114, 255, 0.6);
+}
+
+
+/* CURRENT SHOW PULSING DOT */
+
+.production-live-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #aa72ff;
+
+    box-shadow:
+        0 0 7px #aa72ff,
+        0 0 14px #aa72ff;
+
+    animation: production-live-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes production-live-pulse {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.75);
+    }
+}
+
+
+/* NEXT */
+
+.next-show {
+    --card-accent: #aa72ff;
+}
+
+
+/* =====================================================
+   SHOW CARDS - TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+    .show-status-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .production-status-card {
+        min-height: 420px;
+    }
+}
+
+
+/* =====================================================
+   SHOW CARDS - MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+    .show-status-section {
+        padding: 70px 6vw;
+    }
+
+    .show-status-heading {
+        margin-bottom: 35px;
+        text-align: left;
+    }
+
+    .show-status-heading h2 {
+        letter-spacing: -2px;
+    }
+
+    .production-status-card {
+        min-height: 380px;
+        border-radius: 22px;
+    }
+
+    .production-status-content {
+        padding: 25px;
+    }
+}

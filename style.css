@@ -205,14 +205,13 @@ a {
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
     padding: 18px 0;
-    color: #777;
     white-space: nowrap;
-    font: 500 12px Manrope;
-    letter-spacing: 2px;
+    text-align: center;
 }
 
 .ticker div {
-    word-spacing: 24px;
+   display: inline-block;
+   text-align: center;
 }
 
 .ticker b {

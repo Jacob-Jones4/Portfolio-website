@@ -1,19 +1,289 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<head>
+    <!-- ==========================================
+         BASIC WEBSITE SETTINGS
+    =========================================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Jacob Jones | Lighting Designer</title>
+    <title>
+        Jacob Jones | Lighting Designer & Programmer | St. Louis, MO
+    </title>
 
-        <meta
-            name="description"
-            content="Jacob Jones is a St. Louis-area lighting designer, programmer and technician creating concert, theatre, dance, live-event and pixel lighting experiences."
-        />
+    <meta
+        name="description"
+        content="Jacob Jones is a professional lighting designer, programmer, and technician based in St. Louis, Missouri. Specializing in concert lighting, theatrical lighting design, ETC Eos programming, live events, touring productions, previsualization, and pixel mapping."
+    />
 
-        <link rel="stylesheet" href="style.css" />
-        <script src="script.js" defer></script>
-    </head>
+    <meta name="author" content="Jacob Jones" />
+    <meta name="application-name" content="JJonesLighting" />
+    <meta name="generator" content="Custom HTML Website" />
+
+    <!-- ==========================================
+         SEARCH ENGINE KEYWORDS
+         Primarily descriptive; Google ignores
+         the meta keywords tag for ranking.
+    =========================================== -->
+    <meta
+        name="keywords"
+        content="
+        Jacob Jones,
+        Jacob Jones Lighting,
+        JJonesLighting,
+        JJonesLighting.com,
+        Jacob Jones Lighting Designer,
+        Jacob Jones Lighting Programmer,
+        Lighting Designer,
+        Professional Lighting Designer,
+        Concert Lighting Designer,
+        Theatre Lighting Designer,
+        Theatrical Lighting Designer,
+        Live Event Lighting Designer,
+        Touring Lighting Designer,
+        Lighting Programmer,
+        Concert Lighting Programmer,
+        Theatre Lighting Programmer,
+        ETC Eos Programmer,
+        ETC Ion Programmer,
+        ETC Nomad Programmer,
+        GrandMA3 Programming,
+        Hog Lighting Console,
+        DMX Lighting,
+        Art-Net,
+        sACN Lighting,
+        Lighting Previsualization,
+        Lighting Visualization,
+        Stage Lighting Design,
+        Stage Lighting Programmer,
+        Production Lighting,
+        Entertainment Lighting,
+        Event Lighting Design,
+        Concert Production,
+        Theatre Production,
+        Technical Theatre,
+        Lighting Technician,
+        Production Technician,
+        Lighting Director,
+        Video Director,
+        Technical Director,
+        Live Entertainment Production,
+        Pixel Mapping,
+        xLights Programming,
+        Christmas Light Show Programming,
+        Synchronized Lighting,
+        Hidden Lake Lights,
+        Fake News Huey Lewis Tribute,
+        The Traveling Salvation Show,
+        St Louis Lighting Designer,
+        St Louis Lighting Programmer,
+        Missouri Lighting Designer,
+        Missouri Lighting Programmer,
+        St Charles Lighting Designer,
+        St Peters Lighting Designer,
+        Midwest Lighting Designer,
+        Touring Lighting Technician
+        "
+    />
+
+    <!-- ==========================================
+         SEARCH ENGINE INDEXING
+    =========================================== -->
+    <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <meta
+        name="googlebot"
+        content="index, follow, max-image-preview:large, max-snippet:-1"
+    />
+
+    <meta name="bingbot" content="index, follow" />
+
+    <link
+        rel="canonical"
+        href="https://jjoneslighting.com/"
+    />
+
+    <!-- ==========================================
+         LANGUAGE AND LOCATION
+    =========================================== -->
+    <meta http-equiv="content-language" content="en-US" />
+    <meta name="language" content="English" />
+
+    <meta name="geo.region" content="US-MO" />
+    <meta name="geo.placename" content="St. Louis, Missouri" />
+
+    <!-- ==========================================
+         OPEN GRAPH - FACEBOOK / LINK PREVIEWS
+    =========================================== -->
+    <meta property="og:type" content="website" />
+
+    <meta
+        property="og:title"
+        content="Jacob Jones | Lighting Designer & Programmer"
+    />
+
+    <meta
+        property="og:description"
+        content="Creative lighting design, programming, and production technology for concerts, theatre, touring productions, and live events. Explore the work of St. Louis-based lighting designer Jacob Jones."
+    />
+
+    <meta
+        property="og:url"
+        content="https://jjoneslighting.com/"
+    />
+
+    <meta
+        property="og:site_name"
+        content="JJonesLighting"
+    />
+
+    <meta
+        property="og:image"
+        content="https://jjoneslighting.com/images/TSS-EPC.png"
+    />
+
+    <meta
+        property="og:image:alt"
+        content="Live concert lighting production by Jacob Jones"
+    />
+
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ==========================================
+         TWITTER / X CARD PREVIEWS
+    =========================================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+        name="twitter:title"
+        content="Jacob Jones | Lighting Designer & Programmer"
+    />
+
+    <meta
+        name="twitter:description"
+        content="Concert lighting, theatrical lighting, live production, programming, and technical design by Jacob Jones."
+    />
+
+    <meta
+        name="twitter:image"
+        content="https://jjoneslighting.com/images/TSS-EPC.png"
+    />
+
+    <!-- ==========================================
+         MOBILE AND BROWSER APPEARANCE
+    =========================================== -->
+    <meta name="theme-color" content="#101018" />
+    <meta name="color-scheme" content="dark" />
+
+    <meta name="apple-mobile-web-app-title" content="JJonesLighting" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- ==========================================
+         STRUCTURED DATA - PERSON
+         Helps search engines understand
+         who owns and operates this portfolio.
+    =========================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://jjoneslighting.com/#person",
+        "name": "Jacob Jones",
+        "url": "https://jjoneslighting.com/",
+        "description": "Lighting designer, programmer, and technician specializing in concerts, theatre, touring productions, live entertainment, and production technology.",
+        "jobTitle": [
+            "Lighting Designer",
+            "Lighting Programmer",
+            "Lighting Technician",
+            "Lighting Director"
+        ],
+        "knowsAbout": [
+            "Concert Lighting Design",
+            "Theatrical Lighting Design",
+            "Stage Lighting",
+            "Live Event Production",
+            "Lighting Programming",
+            "ETC Eos",
+            "ETC Ion",
+            "ETC Nomad",
+            "GrandMA3",
+            "Hog Lighting Consoles",
+            "DMX",
+            "Art-Net",
+            "sACN",
+            "Lighting Previsualization",
+            "Pixel Mapping",
+            "xLights",
+            "Production Technology",
+            "Technical Direction"
+        ],
+        "homeLocation": {
+            "@type": "Place",
+            "name": "St. Louis Metropolitan Area, Missouri, USA"
+        },
+        "worksFor": [
+            {
+                "@type": "Organization",
+                "name": "Gateway Studios & Production Services"
+            },
+            {
+                "@type": "Organization",
+                "name": "St. Dominic High School"
+            }
+        ]
+    }
+    </script>
+
+    <!-- ==========================================
+         STRUCTURED DATA - WEBSITE
+    =========================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://jjoneslighting.com/#website",
+        "name": "JJonesLighting",
+        "alternateName": "Jacob Jones Lighting",
+        "url": "https://jjoneslighting.com/",
+        "description": "Portfolio of Jacob Jones, a professional lighting designer, programmer, and technician.",
+        "inLanguage": "en-US",
+        "publisher": {
+            "@id": "https://jjoneslighting.com/#person"
+        }
+    }
+    </script>
+
+    <!-- ==========================================
+         STRUCTURED DATA - HOMEPAGE
+    =========================================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": "https://jjoneslighting.com/#webpage",
+        "url": "https://jjoneslighting.com/",
+        "name": "Jacob Jones - Lighting Designer & Programmer",
+        "description": "Explore concert lighting, theatrical productions, live entertainment, and lighting programming projects by Jacob Jones.",
+        "isPartOf": {
+            "@id": "https://jjoneslighting.com/#website"
+        },
+        "mainEntity": {
+            "@id": "https://jjoneslighting.com/#person"
+        },
+        "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- ==========================================
+         EXISTING STYLES AND JAVASCRIPT
+    =========================================== -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
 
     <body>
         <!-- Navigation -->
